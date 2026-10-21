@@ -6,3 +6,6 @@ assets/first_frame.jpg
 assets/test_*.mp4
 .vscode/
 .idea/
+
+# Raw media working source
+PWG Media/

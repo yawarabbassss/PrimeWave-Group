@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initMobileDrawer();
   initHeroScrolly();
+  initInteractiveServices();
   initServiceFilters();
   initResultFilters();
   initPricingFilters();
@@ -190,7 +191,85 @@ function initHeroScrolly() {
 }
 
 /* ==========================================================================
-   4. SERVICES FILTERING
+   4. INTERACTIVE SERVICES HOVER & POPUP ENGINE
+   ========================================================================== */
+function initInteractiveServices() {
+  const rowItems = document.querySelectorAll('.service-row-item');
+  const previewCard = document.querySelector('.service-preview-card');
+  const previewImg = document.getElementById('previewCardImg');
+  const previewBadge = document.getElementById('previewCardBadge');
+  const previewTitle = document.getElementById('previewCardTitle');
+  const previewMetric = document.getElementById('previewCardMetric');
+  const previewDesc = document.getElementById('previewCardDesc');
+  const previewLink = document.getElementById('previewCardLink');
+  const filterBtns = document.querySelectorAll('.interactive-service-filter-btn');
+
+  if (!rowItems.length || !previewCard) return;
+
+  function activateServiceRow(row) {
+    rowItems.forEach(r => r.classList.remove('active'));
+    row.classList.add('active');
+
+    const title = row.getAttribute('data-title');
+    const tag = row.getAttribute('data-tag');
+    const metric = row.getAttribute('data-metric');
+    const desc = row.getAttribute('data-desc');
+    const img = row.getAttribute('data-img');
+    const link = row.getAttribute('data-link') || 'services.html';
+
+    if (previewImg) {
+      previewImg.style.opacity = '0.3';
+      previewImg.style.transform = 'scale(0.97)';
+      setTimeout(() => {
+        previewImg.src = img;
+        previewImg.alt = title;
+        previewImg.style.opacity = '1';
+        previewImg.style.transform = 'scale(1)';
+      }, 140);
+    }
+    if (previewBadge) previewBadge.textContent = tag;
+    if (previewTitle) previewTitle.textContent = title;
+    if (previewMetric) previewMetric.textContent = metric;
+    if (previewDesc) previewDesc.textContent = desc;
+    if (previewLink) previewLink.href = link;
+  }
+
+  // Hover and click events for desktop and touch
+  rowItems.forEach(row => {
+    row.addEventListener('mouseenter', () => activateServiceRow(row));
+    row.addEventListener('click', () => activateServiceRow(row));
+  });
+
+  // Filter tabs (All Services, Dispatch, Co-hosting, Bookkeeping)
+  if (filterBtns.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        let firstMatch = null;
+
+        rowItems.forEach(row => {
+          const category = row.getAttribute('data-category');
+          if (filter === 'all' || category === filter || (category && category.includes(filter))) {
+            row.style.display = 'flex';
+            if (!firstMatch) firstMatch = row;
+          } else {
+            row.style.display = 'none';
+          }
+        });
+
+        if (firstMatch) {
+          activateServiceRow(firstMatch);
+        }
+      });
+    });
+  }
+}
+
+/* ==========================================================================
+   5. SERVICES FILTERING
    ========================================================================== */
 function initServiceFilters() {
   const filterBtns = document.querySelectorAll('.treatment-filter-btn');

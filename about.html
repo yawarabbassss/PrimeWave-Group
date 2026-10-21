@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us — Primewave Group of Companies</title>
   <meta name="description" content="Learn about Primewave Group of Companies: a results-driven business process outsourcing group based in Lahore, Pakistan partnering with US businesses.">
-  <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,13 +19,18 @@
     <div class="nav-container">
       <a href="index.html" class="brand-logo" aria-label="Primewave Group Home">
         <img src="assets/logo.png" alt="Primewave Group Logo" class="brand-logo-img">
-        <span>Primewave Group</span>
+        <div class="brand-logo-text">
+          <span class="brand-name">Primewave Group</span>
+          <span class="brand-tagline">Where The Next Wave Begins</span>
+        </div>
       </a>
 
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
+          <li><a href="services.html" class="nav-link">Services</a></li>
           <li><a href="companies.html" class="nav-link">Our Companies</a></li>
           <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
           <li><a href="about.html" class="nav-link active">About Us</a></li>
           <li><a href="careers.html" class="nav-link">Careers</a></li>
           <li><a href="blogs.html" class="nav-link">Blogs</a></li>
@@ -34,7 +39,7 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="tel:+18004829283" class="nav-phone" aria-label="Call Primewave Group">
+        <a href="tel:+923327735606" class="nav-phone" aria-label="Call Primewave Group">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           <span>Call Us</span>
         </a>
@@ -45,6 +50,32 @@
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-content">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem;">
+        <img src="assets/logo.png" alt="Primewave Group Logo" style="height: 34px;">
+        <div class="brand-logo-text">
+          <span class="brand-name" style="font-size: 1.25rem;">Primewave Group</span>
+          <span class="brand-tagline">Where The Next Wave Begins</span>
+        </div>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="companies.html" class="mobile-nav-link">Our Companies</a></li>
+        <li><a href="leadership.html" class="mobile-nav-link">Leadership</a></li>
+        <li><a href="events.html" class="mobile-nav-link">Events</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="careers.html" class="mobile-nav-link">Careers</a></li>
+        <li><a href="blogs.html" class="mobile-nav-link">Blogs</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div style="margin-top: 2rem;">
+        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Partner With Us</a>
+      </div>
+    </div>
+  </div>
 
   <main style="padding-top: calc(var(--header-height) + 3rem);">
     <!-- About Story Section -->
@@ -125,14 +156,132 @@
 
   <footer class="site-footer">
     <div class="container">
+      <!-- Bento Grid Navigation (As requested in media_1792597929660_423ae462.png) -->
+      <div class="bento-nav-section">
+        <div class="bento-nav-grid">
+          <!-- Card 1: Services -->
+          <a href="services.html" class="bento-nav-card">
+            <div class="bento-nav-card-top">
+              <p class="bento-nav-desc">Discover the results-driven BPO, freight dispatch, and STR solutions offered by Primewave Group.</p>
+              <div class="bento-nav-arrow">↗</div>
+            </div>
+            <h3 class="bento-nav-title">Services</h3>
+          </a>
+
+          <!-- Card 2: About us -->
+          <a href="about.html" class="bento-nav-card">
+            <div class="bento-nav-card-top">
+              <p class="bento-nav-desc">Learn how Primewave builds systems, eliminates bottlenecks, and scales operations for US businesses.</p>
+              <div class="bento-nav-arrow">↗</div>
+            </div>
+            <h3 class="bento-nav-title">About us</h3>
+          </a>
+
+          <!-- Card 3: Our Companies -->
+          <a href="companies.html" class="bento-nav-card">
+            <div class="bento-nav-card-top">
+              <p class="bento-nav-desc">Explore Sky Dispatch LLC, NationWide Enterprises, and Primewave Services portfolio.</p>
+              <div class="bento-nav-arrow">↗</div>
+            </div>
+            <h3 class="bento-nav-title">Our Companies</h3>
+          </a>
+
+          <!-- Card 4: Contact us -->
+          <a href="contact.html" class="bento-nav-card">
+            <div class="bento-nav-card-top">
+              <p class="bento-nav-desc">Get in touch with us for partnerships, custom dispatch pods, or consultations—we're here to help!</p>
+              <div class="bento-nav-arrow">↗</div>
+            </div>
+            <h3 class="bento-nav-title">Contact us</h3>
+          </a>
+
+          <!-- Card 5: Leadership (Highlighted Card) -->
+          <a href="leadership.html" class="bento-nav-card bento-nav-card-accent">
+            <div class="bento-nav-card-top">
+              <p class="bento-nav-desc">Get to know the executive operators and visionaries steering our 200+ team in Lahore.</p>
+              <div class="bento-nav-arrow">↗</div>
+            </div>
+            <h3 class="bento-nav-title">Our Team</h3>
+          </a>
+
+          <!-- Card 6: Careers -->
+          <a href="careers.html" class="bento-nav-card">
+            <div class="bento-nav-card-top">
+              <p class="bento-nav-desc">Join our 200+ specialist team in Lahore with USD-pegged packages and high-growth trajectories.</p>
+              <div class="bento-nav-arrow">↗</div>
+            </div>
+            <h3 class="bento-nav-title">Careers</h3>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Brand & Details Row (4 Columns) -->
+      <div class="footer-top-grid" style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 3rem;">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/logo.png" alt="Primewave Group Logo" class="brand-logo-img">
+            <div class="brand-logo-text">
+              <span class="brand-name" style="color: #FFFFFF;">Primewave Group</span>
+              <span class="brand-tagline">Where The Next Wave Begins</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            A results-driven business process outsourcing group based in Lahore, Pakistan. Partnering with US businesses to build systems, scale operations, and deliver measurable performance across freight, property management, and bookkeeping.
+          </p>
+          <div class="social-links-row">
+            <a href="https://www.linkedin.com/company/primewave-group/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://instagram.com/primewave.group" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com/people/Primewave-Group-of-Companies/61590947390403/?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Companies -->
+        <div>
+          <h4 class="footer-col-title">Our Companies</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://nationwideenterprises.net" target="_blank" rel="noopener noreferrer" class="footer-link">NationWide Enterprises ↗</a></li>
+            <li><a href="https://skydispatch.net" target="_blank" rel="noopener noreferrer" class="footer-link">Sky Dispatch LLC ↗</a></li>
+            <li><a href="https://primewaveservices.com" target="_blank" rel="noopener noreferrer" class="footer-link">Primewave Services ↗</a></li>
+            <li><a href="services.html#bookkeeping" class="footer-link">Bookkeeping Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Operations HQ -->
+        <div>
+          <h4 class="footer-col-title">Operations HQ</h4>
+          <p style="font-size: 0.875rem; color: var(--color-text-inverse-muted); line-height: 1.6; margin-bottom: 0.75rem;">
+            Central Commercial Zone, Gulberg III,<br>Lahore, Pakistan
+          </p>
+          <p style="font-size: 0.875rem; color: var(--color-text-inverse-muted); line-height: 1.6;">
+            Phone: <a href="tel:+923327735606" style="color: #20C997; font-weight: 600;">+92 332 7735606</a><br>
+            Email: <a href="mailto:info@primewavegroup.co" style="color: #FFFFFF;">info@primewavegroup.co</a>
+          </p>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="footer-col-title">Stay Connected</h4>
+          <p style="font-size: 0.85rem; color: var(--color-text-inverse-muted); margin-bottom: 0.75rem;">
+            Subscribe to our quarterly US market reports and operational scaling insights.
+          </p>
+          <form class="newsletter-form" onsubmit="alert('Thank you for subscribing to Primewave Group!'); return false;">
+            <input type="email" class="newsletter-input" placeholder="Your work email..." required>
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
       <div class="footer-bottom-bar">
         <div>© 2026 Primewave Group of Companies. All rights reserved.</div>
-        <div class="footer-legal-links">
-          <a href="companies.html" class="footer-link">Our Companies</a>
-          <a href="leadership.html" class="footer-link">Leadership</a>
-          <a href="about.html" class="footer-link">About Us</a>
-          <a href="careers.html" class="footer-link">Careers</a>
-          <a href="contact.html" class="footer-link">Contact</a>
+        <div class="footer-credit" style="color: rgba(255,255,255,0.75); font-size: 0.85rem;">
+          Built &amp; Managed by <a href="https://yawarabbass.vercel.app" target="_blank" rel="noopener noreferrer" style="color: #20C997; font-weight: 700; text-decoration: underline;">Yawar Abbas</a>
         </div>
       </div>
     </div>
