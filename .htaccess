@@ -1,0 +1,26 @@
+# Primewave Group - Apache / Laragon URL Rewrite Configuration
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Redirect external .html requests to clean extensionless URLs (SEO 301)
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+  RewriteRule ^ %1 [R=301,L]
+
+  # 2. Redirect index to root /
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index [NC]
+  RewriteRule ^index$ / [R=301,L]
+
+  # 3. Internally resolve extensionless URLs to their .html files
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# Security & Compression Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

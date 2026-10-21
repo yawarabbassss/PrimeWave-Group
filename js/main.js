@@ -215,7 +215,7 @@ function initInteractiveServices() {
     const metric = row.getAttribute('data-metric');
     const desc = row.getAttribute('data-desc');
     const img = row.getAttribute('data-img');
-    const link = row.getAttribute('data-link') || 'services.html';
+    const link = row.getAttribute('data-link') || '/services';
 
     if (previewImg) {
       previewImg.style.opacity = '0.3';
