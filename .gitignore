@@ -1,0 +1,8 @@
+# Temp & python cache
+__pycache__/
+*.pyc
+assets/frame_*.jpg
+assets/first_frame.jpg
+assets/test_*.mp4
+.vscode/
+.idea/
