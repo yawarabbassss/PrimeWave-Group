@@ -2647,7 +2647,34 @@ input, textarea, select {
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    top: 0.75rem;
+    padding-inline: 0.75rem;
+  }
+  .nav-container {
+    padding: 0.55rem 1.15rem;
+  }
+  .brand-logo {
+    gap: 0.65rem;
+    min-width: 0;
+  }
+  .brand-logo-img {
+    height: 32px;
+  }
+  .brand-name {
+    font-size: 1.18rem;
+    white-space: nowrap;
+  }
+  .brand-tagline {
+    display: none;
+  }
   .nav-menu, .nav-phone {
+    display: none;
+  }
+  .nav-actions {
+    gap: 0.5rem;
+  }
+  .nav-actions .btn {
     display: none;
   }
   .nav-toggle {
@@ -3453,6 +3480,53 @@ input, textarea, select {
    MOBILE VIEWPORT ENHANCEMENTS (max-width: 768px and max-width: 576px)
    ========================================================================== */
 @media (max-width: 768px) {
+  /* Navbar Header Mobile Layout (Fixes overlapping button on mobile) */
+  .site-header {
+    top: 0.75rem !important;
+    padding-inline: 0.75rem !important;
+  }
+  .nav-container {
+    padding: 0.55rem 1.15rem !important;
+    justify-content: space-between !important;
+  }
+  .brand-logo {
+    gap: 0.65rem !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+  }
+  .brand-logo-img {
+    height: 32px !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+  }
+  .brand-name {
+    font-size: 1.18rem !important;
+    white-space: nowrap !important;
+    line-height: 1.1 !important;
+  }
+  .brand-tagline {
+    display: none !important;
+  }
+  .nav-menu, .nav-phone {
+    display: none !important;
+  }
+  .nav-actions {
+    gap: 0.5rem !important;
+    flex-shrink: 0 !important;
+  }
+  .nav-actions .btn {
+    display: none !important;
+  }
+  .nav-toggle {
+    display: flex !important;
+    width: 32px !important;
+    height: 32px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+  }
+
   /* Bento Grid Footer: Strictly 1 column on mobile screens */
   .bento-nav-grid {
     grid-template-columns: 1fr !important;
